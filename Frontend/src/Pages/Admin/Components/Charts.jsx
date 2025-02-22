@@ -52,7 +52,7 @@ const Charts = () => {
   }, [])
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-5  min-h-screen">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 min-h-screen p-4">
       {/* User Stats */}
       <div className="col-span-1 bg-white shadow-md p-6 rounded-xl flex flex-col items-center">
         <h2 className="text-xl font-semibold">Total Users</h2>
@@ -68,11 +68,11 @@ const Charts = () => {
         <p>Memory: {systemMetrics.memory}</p>
         <p>Disk: {systemMetrics.disk}</p>
       </div>
-
+  
       {/* Charts Section */}
-      <div className="col-span-2 bg-white shadow-md p-6 rounded-xl">
+      <div className="col-span-1 md:col-span-2 bg-white shadow-md p-6 rounded-xl">
         <h2 className="text-xl font-semibold mb-2">Sales Bar Chart</h2>
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={250}>
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
@@ -83,10 +83,10 @@ const Charts = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-
+  
       <div className="col-span-1 bg-white shadow-md p-6 rounded-xl">
         <h2 className="text-xl font-semibold mb-2">User Growth</h2>
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={250}>
           <LineChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
@@ -97,9 +97,9 @@ const Charts = () => {
           </LineChart>
         </ResponsiveContainer>
       </div>
-
-      {/* Recent Transactions */}
-      <div className="col-span-3 bg-white shadow-md p-6 rounded-xl">
+  
+      {/* Recent Messages */}
+      <div className="col-span-1 md:col-span-3 bg-white shadow-md p-6 rounded-xl overflow-x-auto">
         <h2 className="text-xl font-semibold mb-4">Recent Messages</h2>
         <table className="w-full border-collapse border border-gray-300">
           <thead>
@@ -124,6 +124,7 @@ const Charts = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Charts;

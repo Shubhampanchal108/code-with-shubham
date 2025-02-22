@@ -9,28 +9,29 @@ const Notes = () => {
     getNotes()
   }, [])
 
-    return (
-        <>
-        <div className="bg-purple-600 text-white text-center p-6 m-6 rounded-xl">
-          <p className='text-4xl'>Download Notes by Shubham</p>
-        </div>
-        
-        <div className="grid grid-cols-3 gap-4 p-4">
-        {(
-          notes.map((item, index) => (
-            <Card
-              key={index}
-              image={item.img}
-              CardDescription={item.desc}
-              CardTitle={item.title}
-              btnHref={item.notesUrl}
-              Button="Download"
-            />
-          ))
-        )}
+  return (
+    <>
+      <div className="bg-purple-600 text-white text-center p-6 m-4 sm:m-6 rounded-xl shadow-lg">
+        <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
+          Download Notes by Shubham
+        </p>
       </div>
-        </>
-    )
+  
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        {notes.map((item, index) => (
+          <Card
+            key={index}
+            image={item.img}
+            CardDescription={item.desc}
+            CardTitle={item.title}
+            btnHref={item.notesUrl}
+            Button="Download"
+          />
+        ))}
+      </div>
+    </>
+  );
+  
 }
 
 export default Notes

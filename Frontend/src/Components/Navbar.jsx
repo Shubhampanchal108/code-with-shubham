@@ -20,7 +20,7 @@ export default function Navbar() {
           <Link to="/notes" className="hover:text-gray-400">Notes</Link>
           <Link to="/courses" className="hover:text-gray-400">Courses</Link>
           <Link to="about" className="hover:text-gray-400">About</Link>
-          <Link to="contact" className="hover:text-gray-400">Contact Me</Link>
+          <Link to="/contact" className="hover:text-gray-400">Contact Me</Link>
         </div>
         
         {/* Mobile Menu Button */}

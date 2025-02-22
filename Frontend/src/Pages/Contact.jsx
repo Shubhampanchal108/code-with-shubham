@@ -48,7 +48,7 @@ const Contact = () => {
   return (
     <>
     <ToastContainer/>
-    <div className="mx-10 my-4">
+    <div className="m-1">
       <section className="rounded-xl relative z-10 overflow-hidden bg-blue-300 py-20 dark:bg-dark">
         <div className="container">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
