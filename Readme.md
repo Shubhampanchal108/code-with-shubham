@@ -62,6 +62,5 @@ Feel free to fork the repository and contribute by submitting pull requests.
 ## License
 This project is licensed under the MIT License.
 
-## Contact
-For any queries or suggestions, contact me at **your.email@example.com**.
+
 
